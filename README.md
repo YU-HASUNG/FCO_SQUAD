@@ -1,5 +1,6 @@
 https://play.google.com/store/apps/details?id=leopardcat.studio.fcosquad&hl=ko-KR
 
+[개발기록]<br>
 YU-HASUNG [230115] 광고 관련 수정 2024-01-15 22:10<br>
 YU-HASUNG [230115] 앱 Intro 안내문구 작성 2024-01-15 22:00<br>
 YU-HASUNG [230115] 앱 광고 설정 마무리 2024-01-15 21:41<br>
