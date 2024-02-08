@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">스쿼드조회</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    //Intro
+    <string name="intro_coach_name">구단주명</string>
+    <string name="intro_input">입력</string>
+    <string name="intro_info">환영합니다!\n구단주명을 설정해주세요</string>
+    <string name="intro_fion">FION4</string>
+    <string name="intro_real">Search\nSquad</string>
+    <string name="intro_nickname_alert">구단주명을 입력해주세요</string>
+    <string name="intro_fail_alert">구단주 조회에 실패했어요</string>
+    <string name="notification">\'피온 스쿼드 조회\'는 비공식 어플리케이션입니다.\nEA Sports 및 NEXON의 승인을 받지 않았으며,\nEA Sports 및 Nexon의 공식 의견이나 관리를 받지 않습니다.\n어플리케이션 내에 포함된 FC온라인과 관련된 이미지는 EA Sports 및 NEXON의 재산 및 등록 상표입니다.\n저작권 침해 의도가 없습니다.</string>
+
+    //User
+    <string name="setting_api_fail">구단주님의 정보 조회를 실패했어요</string>
+    <string name="setting_change_coach_name">변경</string>
+    <string name="setting_buy">선수 목록</string>
+    <string name="setting_data_update">데이터 업데이트 기준 설정</string>
+    <string name="setting_match_api_none">구단주님의 공식경기 기록이 없어요</string>
+    <string name="setting_starting">선발</string>
+    <string name="setting_bench">후보</string>
+
+    //Search
+    <string name="search_hint">선수를 검색하세요.</string>
+    <string name="search_title">검색 결과</string>
+    <string name="search_title_none">검색 결과가 없습니다.</string>
+</resources>

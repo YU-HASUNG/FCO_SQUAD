@@ -1,0 +1,212 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.FCOSquad" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:statusBarColor">@color/status_bar</item>
+    </style>
+
+    <style name="Theme.FCOSquad" parent="Base.Theme.FCOSquad" />
+
+    <style name="pageTitle">
+        <item name="android:textSize">16dp</item>
+        <item name="fontFamily">@font/medium_500</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="pageTitleGray">
+        <item name="android:textSize">16dp</item>
+        <item name="fontFamily">@font/regular_400</item>
+        <item name="android:textColor">@color/color_c2c2c2</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="pageTitleBlue">
+        <item name="android:textSize">16dp</item>
+        <item name="fontFamily">@font/bold_700</item>
+        <item name="android:textColor">@color/main_blue</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="pageValue">
+        <item name="android:textSize">21dp</item>
+        <item name="android:textColor">@color/main_blue</item>
+        <item name="fontFamily">@font/bold_700</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="pageBlue12">
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">@color/main_blue</item>
+        <item name="fontFamily">@font/regular_400</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="pageBlue13">
+        <item name="android:textSize">13dp</item>
+        <item name="android:textColor">@color/main_blue</item>
+        <item name="fontFamily">@font/regular_400</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="pagePlayerName">
+        <item name="android:textSize">15dp</item>
+        <item name="fontFamily">@font/medium_500</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="pageWhite12">
+        <item name="android:textSize">12dp</item>
+        <item name="fontFamily">@font/bold_700</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="pageWhite13">
+        <item name="android:textSize">13dp</item>
+        <item name="fontFamily">@font/regular_400</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="pageWhite13Bold">
+        <item name="android:textSize">13dp</item>
+        <item name="fontFamily">@font/bold_700</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="item20">
+        <item name="android:textSize">20dp</item>
+        <item name="fontFamily">@font/bold_700</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="item15">
+        <item name="android:textSize">15dp</item>
+        <item name="fontFamily">@font/bold_700</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="item13">
+        <item name="android:textSize">13dp</item>
+        <item name="fontFamily">@font/bold_700</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="item13regular">
+        <item name="android:textSize">13dp</item>
+        <item name="fontFamily">@font/regular_400</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="item11">
+        <item name="android:textSize">11dp</item>
+        <item name="fontFamily">@font/regular_400</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="search14">
+        <item name="android:textSize">14dp</item>
+        <item name="fontFamily">@font/light_300</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="setting16">
+        <item name="android:textSize">16dp</item>
+        <item name="fontFamily">@font/medium_500</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="setting13">
+        <item name="android:textSize">13dp</item>
+        <item name="fontFamily">@font/medium_500</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="setting14Blue">
+        <item name="android:textSize">14dp</item>
+        <item name="fontFamily">@font/regular_400</item>
+        <item name="android:textColor">@color/main_blue</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="setting11Blue">
+        <item name="android:textSize">11dp</item>
+        <item name="fontFamily">@font/regular_400</item>
+        <item name="android:textColor">@color/main_blue</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="setting11">
+        <item name="android:textSize">11dp</item>
+        <item name="fontFamily">@font/regular_400</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="setting12Gray">
+        <item name="android:textSize">12dp</item>
+        <item name="fontFamily">@font/medium_500</item>
+        <item name="android:textColor">@color/color_c2c2c2</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="setting11White">
+        <item name="android:textSize">11dp</item>
+        <item name="fontFamily">@font/light_300</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="player12White">
+        <item name="android:textSize">12dp</item>
+        <item name="fontFamily">@font/medium_500</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="player13Blue">
+        <item name="android:textSize">13dp</item>
+        <item name="fontFamily">@font/bold_700</item>
+        <item name="android:textColor">@color/main_blue</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="player13Gray">
+        <item name="android:textSize">13dp</item>
+        <item name="fontFamily">@font/regular_400</item>
+        <item name="android:textColor">@color/color_cccccc</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="trade12White">
+        <item name="android:textSize">12dp</item>
+        <item name="fontFamily">@font/regular_400</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="trade10White">
+        <item name="android:textSize">10dp</item>
+        <item name="fontFamily">@font/regular_400</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="trade12Gray">
+        <item name="android:textSize">12dp</item>
+        <item name="fontFamily">@font/light_300</item>
+        <item name="android:textColor">@color/color_c2c2c2</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+</resources>

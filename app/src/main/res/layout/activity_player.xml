@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="activity"
+            type="leopardcat.studio.fcosquad.ui.player.PlayerActivity" />
+
+        <variable
+            name="viewModel"
+            type="leopardcat.studio.fcosquad.viewmodel.PlayerViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_main">
+
+        <!--뒤로 가기-->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back"
+            android:paddingStart="20dp"
+            android:layout_marginTop="20dp"
+            android:onClick="@{() -> activity.finishActivity()}"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <!--선수명-->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/playerName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="20dp"
+            android:theme="@style/pageTitle"
+            app:layout_constraintBottom_toBottomOf="@+id/backBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/backBtn"
+            app:layout_constraintTop_toTopOf="@+id/backBtn" />
+
+        <!--선수 이미지-->
+        <ImageView
+            android:id="@+id/playerImage"
+            android:layout_width="93dp"
+            android:layout_height="93dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/backBtn" />
+
+        <!--선수 가격-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/playerValueLl"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/bg_player_info"
+            app:layout_constraintStart_toEndOf="@+id/playerImage"
+            app:layout_constraintTop_toTopOf="@+id/playerImage">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/playerValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:theme="@style/player13Blue"
+                android:text="@{String.valueOf(viewModel.playerValue)}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="3dp"
+                android:paddingTop="3dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="3dp"
+                android:text="BP"
+                android:theme="@style/pageWhite12"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/playerValue"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--선수 급여-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/playerPayLl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_player_info"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/playerValueLl"
+            app:layout_constraintStart_toEndOf="@+id/playerValueLl"
+            app:layout_constraintTop_toTopOf="@+id/playerValueLl">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/playerPayTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:text="급여"
+                android:theme="@style/pageWhite12"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/playerPay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="3dp"
+                android:paddingTop="3dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="3dp"
+                android:theme="@style/player13Blue"
+                android:text="@{String.valueOf(viewModel.playerPay)}"
+                app:layout_constraintBottom_toBottomOf="@+id/playerPayTV"
+                app:layout_constraintStart_toEndOf="@+id/playerPayTV"
+                app:layout_constraintTop_toTopOf="@+id/playerPayTV" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--선수 시즌 이미지-->
+        <ImageView
+            android:id="@+id/playerSeasonImage"
+            android:layout_width="25dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="2dp"
+            app:layout_constraintBottom_toTopOf="@+id/playerPosition"
+            app:layout_constraintTop_toBottomOf="@+id/playerValueLl"
+            app:layout_constraintStart_toEndOf="@+id/playerImage"/>
+
+        <!--선수 국가 이미지-->
+        <ImageView
+            android:id="@+id/playerNationImage"
+            android:layout_width="34dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="5dp"
+            app:layout_constraintTop_toTopOf="@+id/playerSeasonImage"
+            app:layout_constraintBottom_toBottomOf="@+id/playerSeasonImage"
+            app:layout_constraintStart_toEndOf="@+id/playerSeasonImage"/>
+
+        <!--선수 강화단계 이미지-->
+        <ImageView
+            android:id="@+id/playerGrade"
+            android:layout_width="35dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="5dp"
+            app:layout_constraintTop_toTopOf="@+id/playerSeasonImage"
+            app:layout_constraintBottom_toBottomOf="@+id/playerSeasonImage"
+            app:layout_constraintStart_toEndOf="@+id/playerNationImage" />
+
+        <!--강화단계 선택-->
+        <Spinner
+            android:id="@+id/selectGrade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="강화단계 ▽"
+            android:theme="@style/player12White"
+            app:layout_constraintTop_toTopOf="@+id/playerSeasonImage"
+            app:layout_constraintBottom_toBottomOf="@+id/playerSeasonImage"
+            app:layout_constraintStart_toEndOf="@+id/playerGrade" />
+
+        <!--선수 포지션-->
+        <TextView
+            android:id="@+id/playerPosition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:theme="@style/player12White"
+            android:text="@{String.valueOf(viewModel.playerCountry.position)}"
+            app:layout_constraintStart_toEndOf="@+id/playerImage"
+            app:layout_constraintBottom_toBottomOf="@+id/playerImage" />
+
+        <!--선수 능력치-->
+        <TextView
+            android:id="@+id/playerOverall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:theme="@style/player12White"
+            android:text="@{String.valueOf(viewModel.playerCountry.stats)}"
+            app:layout_constraintTop_toTopOf="@+id/playerPosition"
+            app:layout_constraintBottom_toBottomOf="@+id/playerPosition"
+            app:layout_constraintStart_toEndOf="@+id/playerPosition" />
+
+        <!--분리 영역-->
+        <View
+            android:id="@+id/separate"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:background="@color/color_d9d9d9"
+            app:layout_constraintTop_toTopOf="@+id/playerOverall"
+            app:layout_constraintBottom_toBottomOf="@+id/playerOverall"
+            app:layout_constraintStart_toEndOf="@+id/playerOverall"/>
+
+        <!--선수 신체정보-->
+        <TextView
+            android:id="@+id/playerHeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:theme="@style/player12White"
+            android:text="@{String.valueOf(viewModel.playerBody.height)}"
+            app:layout_constraintStart_toEndOf="@+id/separate"
+            app:layout_constraintTop_toTopOf="@+id/separate"
+            app:layout_constraintBottom_toBottomOf="@+id/separate"/>
+        <TextView
+            android:id="@+id/playerWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:theme="@style/player12White"
+            android:text="@{String.valueOf(viewModel.playerBody.weight)}"
+            app:layout_constraintStart_toEndOf="@+id/playerHeight"
+            app:layout_constraintTop_toTopOf="@+id/playerHeight"
+            app:layout_constraintBottom_toBottomOf="@+id/playerHeight" />
+        <TextView
+            android:id="@+id/playerBodyForm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:theme="@style/player12White"
+            android:text="@{String.valueOf(viewModel.playerBody.physical)}"
+            app:layout_constraintStart_toEndOf="@+id/playerWeight"
+            app:layout_constraintTop_toTopOf="@+id/playerWeight"
+            app:layout_constraintBottom_toBottomOf="@+id/playerWeight" />
+        <TextView
+            android:id="@+id/playerFoot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:theme="@style/player12White"
+            android:text="@{String.valueOf(viewModel.playerBody.foot)}"
+            app:layout_constraintStart_toEndOf="@+id/playerBodyForm"
+            app:layout_constraintTop_toTopOf="@+id/playerBodyForm"
+            app:layout_constraintBottom_toBottomOf="@+id/playerBodyForm" />
+
+        <!--탭 선택버튼-->
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/playerImage">
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/chart"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:paddingBottom="7dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="bottom | center_horizontal"
+                android:text="상세차트"
+                android:textSize="16dp"
+                android:textColor="@drawable/selector_radio_text" />
+
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/info"
+                android:checked="true"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:paddingBottom="7dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="bottom | center_horizontal"
+                android:text="선수정보"
+                android:textSize="16dp"
+                android:textColor="@drawable/selector_radio_text"/>
+        </RadioGroup>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/radioView"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+            app:layout_constraintEnd_toEndOf="parent" >
+
+            <ImageView
+                android:id="@+id/radioViewOne"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/radioViewThree"/>
+
+
+            <ImageView
+                android:id="@+id/radioViewThree"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                app:layout_constraintStart_toEndOf="@+id/radioViewOne"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <!--웹뷰-->
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!--탭-->
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/color_0c0c0c"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

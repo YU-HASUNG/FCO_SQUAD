@@ -1,0 +1,839 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/infoMain"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_0c0c0c">
+
+    <!--line one-->
+    <TextView
+        android:id="@+id/speed"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:theme="@style/player13Gray"
+        app:layout_constraintEnd_toStartOf="@+id/speedValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="속력"/>
+
+    <TextView
+        android:id="@+id/speedValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:gravity="end"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/speed"
+        app:layout_constraintEnd_toStartOf="@+id/balance"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/balance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:gravity="start"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/speedValue"
+        app:layout_constraintEnd_toStartOf="@+id/balanceValue"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="밸런스"/>
+
+    <TextView
+        android:id="@+id/balanceValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/balance"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!--line two-->
+    <TextView
+        android:id="@+id/acceleration"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="start"
+        android:theme="@style/player13Gray"
+        app:layout_constraintEnd_toStartOf="@+id/accelerationValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/speed"
+        android:text="가속력"/>
+
+    <TextView
+        android:id="@+id/accelerationValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:gravity="end"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/acceleration"
+        app:layout_constraintEnd_toStartOf="@+id/reactionRate"
+        app:layout_constraintTop_toBottomOf="@+id/speed" />
+
+    <TextView
+        android:id="@+id/reactionRate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="15dp"
+        android:gravity="start"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/accelerationValue"
+        app:layout_constraintEnd_toStartOf="@+id/reactionRateValue"
+        app:layout_constraintTop_toBottomOf="@+id/speed"
+        android:text="반응 속도"/>
+
+    <TextView
+        android:id="@+id/reactionRateValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="end"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/reactionRate"
+        app:layout_constraintTop_toBottomOf="@+id/speed"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!--line three-->
+    <TextView
+        android:id="@+id/goalDeterminate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="start"
+        android:theme="@style/player13Gray"
+        app:layout_constraintEnd_toStartOf="@+id/goalDeterminateValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/acceleration"
+        android:text="골 결정력"/>
+
+    <TextView
+        android:id="@+id/goalDeterminateValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:gravity="end"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/goalDeterminate"
+        app:layout_constraintEnd_toStartOf="@+id/personnelDefense"
+        app:layout_constraintTop_toBottomOf="@+id/acceleration" />
+
+    <TextView
+        android:id="@+id/personnelDefense"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="15dp"
+        android:gravity="start"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/goalDeterminateValue"
+        app:layout_constraintEnd_toStartOf="@+id/personnelDefenseValue"
+        app:layout_constraintTop_toBottomOf="@+id/acceleration"
+        android:text="대인 수비"/>
+
+    <TextView
+        android:id="@+id/personnelDefenseValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="end"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/personnelDefense"
+        app:layout_constraintTop_toBottomOf="@+id/acceleration"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!--line four-->
+    <TextView
+        android:id="@+id/shootingPower"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="start"
+        android:theme="@style/player13Gray"
+        app:layout_constraintEnd_toStartOf="@+id/shootingPowerValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goalDeterminate"
+        android:text="슛 파워"/>
+
+    <TextView
+        android:id="@+id/shootingPowerValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:gravity="end"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/shootingPower"
+        app:layout_constraintEnd_toStartOf="@+id/tackle"
+        app:layout_constraintTop_toBottomOf="@+id/goalDeterminate" />
+
+    <TextView
+        android:id="@+id/tackle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="15dp"
+        android:gravity="start"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/shootingPowerValue"
+        app:layout_constraintEnd_toStartOf="@+id/tackleValue"
+        app:layout_constraintTop_toBottomOf="@+id/goalDeterminate"
+        android:text="태클"/>
+
+    <TextView
+        android:id="@+id/tackleValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="end"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/tackle"
+        app:layout_constraintTop_toBottomOf="@+id/goalDeterminate"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!--line five-->
+    <TextView
+        android:id="@+id/longShoot"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="start"
+        android:theme="@style/player13Gray"
+        app:layout_constraintEnd_toStartOf="@+id/longShootValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shootingPower"
+        android:text="중거리 슛"/>
+
+    <TextView
+        android:id="@+id/longShootValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:gravity="end"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/longShoot"
+        app:layout_constraintEnd_toStartOf="@+id/interception"
+        app:layout_constraintTop_toBottomOf="@+id/shootingPower" />
+
+    <TextView
+        android:id="@+id/interception"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="15dp"
+        android:gravity="start"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/longShootValue"
+        app:layout_constraintEnd_toStartOf="@+id/interceptionValue"
+        app:layout_constraintTop_toBottomOf="@+id/shootingPower"
+        android:text="가로채기"/>
+
+    <TextView
+        android:id="@+id/interceptionValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="end"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/interception"
+        app:layout_constraintTop_toBottomOf="@+id/shootingPower"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!--line six-->
+    <TextView
+        android:id="@+id/positioning"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="start"
+        android:theme="@style/player13Gray"
+        app:layout_constraintEnd_toStartOf="@+id/positioningValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/longShoot"
+        android:text="위치 선정"/>
+
+    <TextView
+        android:id="@+id/positioningValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:gravity="end"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/positioning"
+        app:layout_constraintEnd_toStartOf="@+id/header"
+        app:layout_constraintTop_toBottomOf="@+id/longShoot" />
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="15dp"
+        android:gravity="start"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/positioningValue"
+        app:layout_constraintEnd_toStartOf="@+id/headerValue"
+        app:layout_constraintTop_toBottomOf="@+id/longShoot"
+        android:text="헤더"/>
+
+    <TextView
+        android:id="@+id/headerValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="end"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/header"
+        app:layout_constraintTop_toBottomOf="@+id/longShoot"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!--line seven-->
+    <TextView
+        android:id="@+id/volley"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="start"
+        android:theme="@style/player13Gray"
+        app:layout_constraintEnd_toStartOf="@+id/volleyValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/positioning"
+        android:text="발리 슛"/>
+
+    <TextView
+        android:id="@+id/volleyValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:gravity="end"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/volley"
+        app:layout_constraintEnd_toStartOf="@+id/slidingTackle"
+        app:layout_constraintTop_toBottomOf="@+id/positioning" />
+
+    <TextView
+        android:id="@+id/slidingTackle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="15dp"
+        android:gravity="start"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/volleyValue"
+        app:layout_constraintEnd_toStartOf="@+id/slidingTackleValue"
+        app:layout_constraintTop_toBottomOf="@+id/positioning"
+        android:text="슬라이딩 태클"/>
+
+    <TextView
+        android:id="@+id/slidingTackleValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="end"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/slidingTackle"
+        app:layout_constraintTop_toBottomOf="@+id/positioning"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!--line eight-->
+    <TextView
+        android:id="@+id/penalty"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="start"
+        android:theme="@style/player13Gray"
+        app:layout_constraintEnd_toStartOf="@+id/penaltyValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/volley"
+        android:text="패널티 킥"/>
+
+    <TextView
+        android:id="@+id/penaltyValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:gravity="end"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/penalty"
+        app:layout_constraintEnd_toStartOf="@+id/struggle"
+        app:layout_constraintTop_toBottomOf="@+id/volley" />
+
+    <TextView
+        android:id="@+id/struggle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="15dp"
+        android:gravity="start"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/penaltyValue"
+        app:layout_constraintEnd_toStartOf="@+id/struggleValue"
+        app:layout_constraintTop_toBottomOf="@+id/volley"
+        android:text="몸싸움"/>
+
+    <TextView
+        android:id="@+id/struggleValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="end"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/struggle"
+        app:layout_constraintTop_toBottomOf="@+id/volley"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!--line nine-->
+    <TextView
+        android:id="@+id/shortPass"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="start"
+        android:theme="@style/player13Gray"
+        app:layout_constraintEnd_toStartOf="@+id/shortPassValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/penalty"
+        android:text="짧은 패스"/>
+
+    <TextView
+        android:id="@+id/shortPassValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:gravity="end"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/shortPass"
+        app:layout_constraintEnd_toStartOf="@+id/stamina"
+        app:layout_constraintTop_toBottomOf="@+id/penalty" />
+
+    <TextView
+        android:id="@+id/stamina"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="15dp"
+        android:gravity="start"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/shortPassValue"
+        app:layout_constraintEnd_toStartOf="@+id/staminaValue"
+        app:layout_constraintTop_toBottomOf="@+id/penalty"
+        android:text="스태미너"/>
+
+    <TextView
+        android:id="@+id/staminaValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="end"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/stamina"
+        app:layout_constraintTop_toBottomOf="@+id/penalty"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!--line ten-->
+    <TextView
+        android:id="@+id/eyesight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="start"
+        android:theme="@style/player13Gray"
+        app:layout_constraintEnd_toStartOf="@+id/eyesightValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shortPass"
+        android:text="시야"/>
+
+    <TextView
+        android:id="@+id/eyesightValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:gravity="end"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/eyesight"
+        app:layout_constraintEnd_toStartOf="@+id/positiveness"
+        app:layout_constraintTop_toBottomOf="@+id/shortPass" />
+
+    <TextView
+        android:id="@+id/positiveness"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="15dp"
+        android:gravity="start"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/eyesightValue"
+        app:layout_constraintEnd_toStartOf="@+id/positivenessValue"
+        app:layout_constraintTop_toBottomOf="@+id/shortPass"
+        android:text="적극성"/>
+
+    <TextView
+        android:id="@+id/positivenessValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="end"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/positiveness"
+        app:layout_constraintTop_toBottomOf="@+id/shortPass"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!--line eleven-->
+    <TextView
+        android:id="@+id/cross"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="start"
+        android:theme="@style/player13Gray"
+        app:layout_constraintEnd_toStartOf="@+id/crossValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eyesight"
+        android:text="크로스"/>
+
+    <TextView
+        android:id="@+id/crossValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:gravity="end"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/cross"
+        app:layout_constraintEnd_toStartOf="@+id/jump"
+        app:layout_constraintTop_toBottomOf="@+id/eyesight" />
+
+    <TextView
+        android:id="@+id/jump"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="15dp"
+        android:gravity="start"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/crossValue"
+        app:layout_constraintEnd_toStartOf="@+id/jumpValue"
+        app:layout_constraintTop_toBottomOf="@+id/eyesight"
+        android:text="점프"/>
+
+    <TextView
+        android:id="@+id/jumpValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="end"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/jump"
+        app:layout_constraintTop_toBottomOf="@+id/eyesight"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!--line twelve-->
+    <TextView
+        android:id="@+id/longPass"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="start"
+        android:theme="@style/player13Gray"
+        app:layout_constraintEnd_toStartOf="@+id/longPassValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cross"
+        android:text="긴 패스"/>
+
+    <TextView
+        android:id="@+id/longPassValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:gravity="end"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/longPass"
+        app:layout_constraintEnd_toStartOf="@+id/composure"
+        app:layout_constraintTop_toBottomOf="@+id/cross" />
+
+    <TextView
+        android:id="@+id/composure"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="15dp"
+        android:gravity="start"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/longPassValue"
+        app:layout_constraintEnd_toStartOf="@+id/composureValue"
+        app:layout_constraintTop_toBottomOf="@+id/cross"
+        android:text="침착성"/>
+
+    <TextView
+        android:id="@+id/composureValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="end"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/composure"
+        app:layout_constraintTop_toBottomOf="@+id/cross"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!--line thirteen-->
+    <TextView
+        android:id="@+id/freeKick"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="start"
+        android:theme="@style/player13Gray"
+        app:layout_constraintEnd_toStartOf="@+id/freeKickValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/longPass"
+        android:text="프리킥"/>
+
+    <TextView
+        android:id="@+id/freeKickValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:gravity="end"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/freeKick"
+        app:layout_constraintEnd_toStartOf="@+id/GKdiving"
+        app:layout_constraintTop_toBottomOf="@+id/longPass" />
+
+    <TextView
+        android:id="@+id/GKdiving"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="15dp"
+        android:gravity="start"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/freeKickValue"
+        app:layout_constraintEnd_toStartOf="@+id/GKdivingValue"
+        app:layout_constraintTop_toBottomOf="@+id/longPass"
+        android:text="GK 다이빙"/>
+
+    <TextView
+        android:id="@+id/GKdivingValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="end"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/GKdiving"
+        app:layout_constraintTop_toBottomOf="@+id/longPass"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!--line fourteen-->
+    <TextView
+        android:id="@+id/curve"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="start"
+        android:theme="@style/player13Gray"
+        app:layout_constraintEnd_toStartOf="@+id/curveValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/freeKick"
+        android:text="커브"/>
+
+    <TextView
+        android:id="@+id/curveValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:gravity="end"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/curve"
+        app:layout_constraintEnd_toStartOf="@+id/GKhandling"
+        app:layout_constraintTop_toBottomOf="@+id/freeKick" />
+
+    <TextView
+        android:id="@+id/GKhandling"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="15dp"
+        android:gravity="start"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/curveValue"
+        app:layout_constraintEnd_toStartOf="@+id/GKhandlingValue"
+        app:layout_constraintTop_toBottomOf="@+id/freeKick"
+        android:text="GK 핸들링"/>
+
+    <TextView
+        android:id="@+id/GKhandlingValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="end"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/GKhandling"
+        app:layout_constraintTop_toBottomOf="@+id/freeKick"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!--line fifthteen-->
+    <TextView
+        android:id="@+id/dribble"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="start"
+        android:theme="@style/player13Gray"
+        app:layout_constraintEnd_toStartOf="@+id/dribbleValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/curve"
+        android:text="드리블"/>
+
+    <TextView
+        android:id="@+id/dribbleValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:gravity="end"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/dribble"
+        app:layout_constraintEnd_toStartOf="@+id/GKkick"
+        app:layout_constraintTop_toBottomOf="@+id/curve" />
+
+    <TextView
+        android:id="@+id/GKkick"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="15dp"
+        android:gravity="start"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/dribbleValue"
+        app:layout_constraintEnd_toStartOf="@+id/GKkickValue"
+        app:layout_constraintTop_toBottomOf="@+id/curve"
+        android:text="GK 킥"/>
+
+    <TextView
+        android:id="@+id/GKkickValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="end"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/GKkick"
+        app:layout_constraintTop_toBottomOf="@+id/curve"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!--line fifthteen-->
+    <TextView
+        android:id="@+id/ballControl"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="start"
+        android:theme="@style/player13Gray"
+        app:layout_constraintEnd_toStartOf="@+id/ballControlValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dribble"
+        android:text="볼 컨트롤"/>
+
+    <TextView
+        android:id="@+id/ballControlValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:gravity="end"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/ballControl"
+        app:layout_constraintEnd_toStartOf="@+id/GKreactionRate"
+        app:layout_constraintTop_toBottomOf="@+id/dribble" />
+
+    <TextView
+        android:id="@+id/GKreactionRate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="15dp"
+        android:gravity="start"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/ballControlValue"
+        app:layout_constraintEnd_toStartOf="@+id/GKreactionRateValue"
+        app:layout_constraintTop_toBottomOf="@+id/dribble"
+        android:text="GK 반응속도"/>
+
+    <TextView
+        android:id="@+id/GKreactionRateValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="end"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/GKreactionRate"
+        app:layout_constraintTop_toBottomOf="@+id/dribble"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!--line sixteen-->
+    <TextView
+        android:id="@+id/agility"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="start"
+        android:theme="@style/player13Gray"
+        app:layout_constraintEnd_toStartOf="@+id/agilityValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ballControl"
+        android:text="민첩성"/>
+
+    <TextView
+        android:id="@+id/agilityValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:gravity="end"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/agility"
+        app:layout_constraintEnd_toStartOf="@+id/GKpositioning"
+        app:layout_constraintTop_toBottomOf="@+id/ballControl" />
+
+    <TextView
+        android:id="@+id/GKpositioning"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="15dp"
+        android:gravity="start"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/agilityValue"
+        app:layout_constraintEnd_toStartOf="@+id/GKpositioningValue"
+        app:layout_constraintTop_toBottomOf="@+id/ballControl"
+        android:text="GK 위치선정"/>
+
+    <TextView
+        android:id="@+id/GKpositioningValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="end"
+        android:theme="@style/player13Gray"
+        app:layout_constraintStart_toEndOf="@+id/GKpositioning"
+        app:layout_constraintTop_toBottomOf="@+id/ballControl"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

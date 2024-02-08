@@ -1,0 +1,1220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="fragment"
+            type="leopardcat.studio.fcosquad.ui.main.SquadFragment" />
+
+        <variable
+            name="viewModel"
+            type="leopardcat.studio.fcosquad.viewmodel.MainViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.main.SquadFragment">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/bg_squad"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/squadName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="30dp"
+            android:theme="@style/pageValue"
+            android:text="@{String.valueOf(viewModel.fcoUserInfo.nickname)}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/bottomNav"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!--GK-->
+            <LinearLayout
+                android:id="@+id/player0"
+                android:layout_width="80dp"
+                android:layout_height="95dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:id="@+id/playerPosition0"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/item13"
+                    android:gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/GK"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+
+                <ImageView
+                    android:id="@+id/seasonImage0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp" />
+
+                <TextView
+                    android:id="@+id/playerName0"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/setting11White"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <!--SW-->
+            <LinearLayout
+                android:id="@+id/player1"
+                android:layout_width="80dp"
+                android:layout_height="95dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/player0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:id="@+id/playerPosition1"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/item13"
+                    android:gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/SW"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+
+                <ImageView
+                    android:id="@+id/seasonImage1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp" />
+
+                <TextView
+                    android:id="@+id/playerName1"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/setting11White"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <!--RWB-->
+            <LinearLayout
+                android:id="@+id/player2"
+                android:layout_width="80dp"
+                android:layout_height="95dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="80dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/player0"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:id="@+id/playerPosition2"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/item13"
+                    android:gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/RWB"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+
+                <ImageView
+                    android:id="@+id/seasonImage2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp" />
+
+                <TextView
+                    android:id="@+id/playerName2"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/setting11White"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <!--RB-->
+            <LinearLayout
+                android:id="@+id/player3"
+                android:layout_width="80dp"
+                android:layout_height="95dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/player0"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:id="@+id/playerPosition3"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/item13"
+                    android:gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/RB"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+
+                <ImageView
+                    android:id="@+id/seasonImage3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp" />
+
+                <TextView
+                    android:id="@+id/playerName3"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/setting11White"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <!--RCB-->
+            <LinearLayout
+                android:id="@+id/player4"
+                android:layout_width="80dp"
+                android:layout_height="95dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/player0"
+                app:layout_constraintEnd_toStartOf="@+id/player3">
+
+                <TextView
+                    android:id="@+id/playerPosition4"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/item13"
+                    android:gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/RCB"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+
+                <ImageView
+                    android:id="@+id/seasonImage4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp" />
+
+                <TextView
+                    android:id="@+id/playerName4"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/setting11White"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <!--CB-->
+            <LinearLayout
+                android:id="@+id/player5"
+                android:layout_width="80dp"
+                android:layout_height="95dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/player0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:id="@+id/playerPosition5"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/item13"
+                    android:gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/CB"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+
+                <ImageView
+                    android:id="@+id/seasonImage5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp" />
+
+                <TextView
+                    android:id="@+id/playerName5"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/setting11White"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <!--LCB-->
+            <LinearLayout
+                android:id="@+id/player6"
+                android:layout_width="80dp"
+                android:layout_height="95dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/player0"
+                app:layout_constraintStart_toEndOf="@+id/player7">
+
+                <TextView
+                    android:id="@+id/playerPosition6"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/item13"
+                    android:gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/LCB"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+
+                <ImageView
+                    android:id="@+id/seasonImage6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp" />
+
+                <TextView
+                    android:id="@+id/playerName6"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/setting11White"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <!--LB-->
+            <LinearLayout
+                android:id="@+id/player7"
+                android:layout_width="80dp"
+                android:layout_height="95dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/player0"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/playerPosition7"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/item13"
+                    android:gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/LB"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+
+                <ImageView
+                    android:id="@+id/seasonImage7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp" />
+
+                <TextView
+                    android:id="@+id/playerName7"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/setting11White"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <!--LWB-->
+            <LinearLayout
+                android:id="@+id/player8"
+                android:layout_width="80dp"
+                android:layout_height="95dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="80dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/player0"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/playerPosition8"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/item13"
+                    android:gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/LWB"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+
+                <ImageView
+                    android:id="@+id/seasonImage8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp" />
+
+                <TextView
+                    android:id="@+id/playerName8"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/setting11White"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <!--RDM-->
+            <LinearLayout
+                android:id="@+id/player9"
+                android:layout_width="80dp"
+                android:layout_height="95dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/player4"
+                app:layout_constraintStart_toStartOf="@+id/player4"
+                app:layout_constraintEnd_toEndOf="@+id/player4">
+
+                <TextView
+                    android:id="@+id/playerPosition9"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/item13"
+                    android:gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/RDM"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+
+                <ImageView
+                    android:id="@+id/seasonImage9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp" />
+
+                <TextView
+                    android:id="@+id/playerName9"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/setting11White"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <!--CDM-->
+            <LinearLayout
+                android:id="@+id/player10"
+                android:layout_width="80dp"
+                android:layout_height="95dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/player5"
+                app:layout_constraintStart_toStartOf="@+id/player5"
+                app:layout_constraintEnd_toEndOf="@+id/player5">
+
+                <TextView
+                    android:id="@+id/playerPosition10"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/item13"
+                    android:gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/CDM"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+
+                <ImageView
+                    android:id="@+id/seasonImage10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp" />
+
+                <TextView
+                    android:id="@+id/playerName10"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/setting11White"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <!--LDM-->
+            <LinearLayout
+                android:id="@+id/player11"
+                android:layout_width="80dp"
+                android:layout_height="95dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/player6"
+                app:layout_constraintStart_toStartOf="@+id/player6"
+                app:layout_constraintEnd_toEndOf="@+id/player6">
+
+                <TextView
+                    android:id="@+id/playerPosition11"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/item13"
+                    android:gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/LDM"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+
+                <ImageView
+                    android:id="@+id/seasonImage11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp" />
+
+                <TextView
+                    android:id="@+id/playerName11"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/setting11White"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <!--RM-->
+            <LinearLayout
+                android:id="@+id/player12"
+                android:layout_width="80dp"
+                android:layout_height="95dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/player2"
+                app:layout_constraintStart_toStartOf="@+id/player2"
+                app:layout_constraintEnd_toEndOf="@+id/player2">
+
+                <TextView
+                    android:id="@+id/playerPosition12"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/item13"
+                    android:gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/RM"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+
+                <ImageView
+                    android:id="@+id/seasonImage12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp" />
+
+                <TextView
+                    android:id="@+id/playerName12"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/setting11White"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <!--RCM-->
+            <LinearLayout
+                android:id="@+id/player13"
+                android:layout_width="80dp"
+                android:layout_height="95dp"
+                android:layout_marginBottom="60dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/player4"
+                app:layout_constraintStart_toStartOf="@+id/player4"
+                app:layout_constraintEnd_toEndOf="@+id/player4">
+
+                <TextView
+                    android:id="@+id/playerPosition13"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/item13"
+                    android:gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/RCM"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+
+                <ImageView
+                    android:id="@+id/seasonImage13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp" />
+
+                <TextView
+                    android:id="@+id/playerName13"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/setting11White"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <!--CM-->
+            <LinearLayout
+                android:id="@+id/player14"
+                android:layout_width="80dp"
+                android:layout_height="95dp"
+                android:layout_marginBottom="60dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/player5"
+                app:layout_constraintStart_toStartOf="@+id/player5"
+                app:layout_constraintEnd_toEndOf="@+id/player5">
+
+                <TextView
+                    android:id="@+id/playerPosition14"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/item13"
+                    android:gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/CM"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+
+                <ImageView
+                    android:id="@+id/seasonImage14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp" />
+
+                <TextView
+                    android:id="@+id/playerName14"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/setting11White"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <!--LCM-->
+            <LinearLayout
+                android:id="@+id/player15"
+                android:layout_width="80dp"
+                android:layout_height="95dp"
+                android:layout_marginBottom="60dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/player6"
+                app:layout_constraintStart_toStartOf="@+id/player6"
+                app:layout_constraintEnd_toEndOf="@+id/player6">
+
+                <TextView
+                    android:id="@+id/playerPosition15"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/item13"
+                    android:gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/LCM"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+
+                <ImageView
+                    android:id="@+id/seasonImage15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp" />
+
+                <TextView
+                    android:id="@+id/playerName15"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/setting11White"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <!--LM-->
+            <LinearLayout
+                android:id="@+id/player16"
+                android:layout_width="80dp"
+                android:layout_height="95dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/player8"
+                app:layout_constraintStart_toStartOf="@+id/player8"
+                app:layout_constraintEnd_toEndOf="@+id/player8">
+
+                <TextView
+                    android:id="@+id/playerPosition16"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/item13"
+                    android:gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/LM"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+
+                <ImageView
+                    android:id="@+id/seasonImage16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp" />
+
+                <TextView
+                    android:id="@+id/playerName16"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/setting11White"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <!--RAM-->
+            <LinearLayout
+                android:id="@+id/player17"
+                android:layout_width="80dp"
+                android:layout_height="95dp"
+                android:layout_marginBottom="100dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/player4"
+                app:layout_constraintStart_toStartOf="@+id/player4"
+                app:layout_constraintEnd_toEndOf="@+id/player4">
+
+                <TextView
+                    android:id="@+id/playerPosition17"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/item13"
+                    android:gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/RAM"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+
+                <ImageView
+                    android:id="@+id/seasonImage17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp" />
+
+                <TextView
+                    android:id="@+id/playerName17"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/setting11White"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <!--CAM-->
+            <LinearLayout
+                android:id="@+id/player18"
+                android:layout_width="80dp"
+                android:layout_height="95dp"
+                android:layout_marginBottom="100dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/player5"
+                app:layout_constraintStart_toStartOf="@+id/player5"
+                app:layout_constraintEnd_toEndOf="@+id/player5">
+
+                <TextView
+                    android:id="@+id/playerPosition18"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/item13"
+                    android:gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/CAM"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+
+                <ImageView
+                    android:id="@+id/seasonImage18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp" />
+
+                <TextView
+                    android:id="@+id/playerName18"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/setting11White"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <!--LAM-->
+            <LinearLayout
+                android:id="@+id/player19"
+                android:layout_width="80dp"
+                android:layout_height="95dp"
+                android:layout_marginBottom="100dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/player6"
+                app:layout_constraintStart_toStartOf="@+id/player6"
+                app:layout_constraintEnd_toEndOf="@+id/player6">
+
+                <TextView
+                    android:id="@+id/playerPosition19"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/item13"
+                    android:gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/LAM"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+
+                <ImageView
+                    android:id="@+id/seasonImage19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp" />
+
+                <TextView
+                    android:id="@+id/playerName19"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/setting11White"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <!--RF-->
+            <LinearLayout
+                android:id="@+id/player20"
+                android:layout_width="80dp"
+                android:layout_height="95dp"
+                android:layout_marginBottom="160dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/player4"
+                app:layout_constraintStart_toStartOf="@+id/player4"
+                app:layout_constraintEnd_toEndOf="@+id/player4">
+
+                <TextView
+                    android:id="@+id/playerPosition20"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/item13"
+                    android:gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/RF"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+
+                <ImageView
+                    android:id="@+id/seasonImage20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp" />
+
+                <TextView
+                    android:id="@+id/playerName20"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/setting11White"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <!--CF-->
+            <LinearLayout
+                android:id="@+id/player21"
+                android:layout_width="80dp"
+                android:layout_height="95dp"
+                android:layout_marginBottom="160dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/player5"
+                app:layout_constraintStart_toStartOf="@+id/player5"
+                app:layout_constraintEnd_toEndOf="@+id/player5">
+
+                <TextView
+                    android:id="@+id/playerPosition21"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/item13"
+                    android:gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/CF"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+
+                <ImageView
+                    android:id="@+id/seasonImage21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp" />
+
+                <TextView
+                    android:id="@+id/playerName21"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/setting11White"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <!--LF-->
+            <LinearLayout
+                android:id="@+id/player22"
+                android:layout_width="80dp"
+                android:layout_height="95dp"
+                android:layout_marginBottom="160dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/player6"
+                app:layout_constraintStart_toStartOf="@+id/player6"
+                app:layout_constraintEnd_toEndOf="@+id/player6">
+
+                <TextView
+                    android:id="@+id/playerPosition22"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/item13"
+                    android:gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/LF"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+
+                <ImageView
+                    android:id="@+id/seasonImage22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp" />
+
+                <TextView
+                    android:id="@+id/playerName22"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/setting11White"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <!--RW-->
+            <LinearLayout
+                android:id="@+id/player23"
+                android:layout_width="80dp"
+                android:layout_height="95dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/player12"
+                app:layout_constraintStart_toStartOf="@+id/player12"
+                app:layout_constraintEnd_toEndOf="@+id/player12">
+
+                <TextView
+                    android:id="@+id/playerPosition23"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/item13"
+                    android:gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/RW"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+
+                <ImageView
+                    android:id="@+id/seasonImage23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp" />
+
+                <TextView
+                    android:id="@+id/playerName23"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/setting11White"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <!--RS-->
+            <LinearLayout
+                android:id="@+id/player24"
+                android:layout_width="80dp"
+                android:layout_height="95dp"
+                android:layout_marginBottom="220dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/player4"
+                app:layout_constraintStart_toStartOf="@+id/player4"
+                app:layout_constraintEnd_toEndOf="@+id/player4">
+
+                <TextView
+                    android:id="@+id/playerPosition24"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/item13"
+                    android:gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/RS"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+
+                <ImageView
+                    android:id="@+id/seasonImage24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp" />
+
+                <TextView
+                    android:id="@+id/playerName24"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/setting11White"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <!--ST-->
+            <LinearLayout
+                android:id="@+id/player25"
+                android:layout_width="80dp"
+                android:layout_height="95dp"
+                android:layout_marginBottom="220dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/player5"
+                app:layout_constraintStart_toStartOf="@+id/player5"
+                app:layout_constraintEnd_toEndOf="@+id/player5">
+
+                <TextView
+                    android:id="@+id/playerPosition25"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/item13"
+                    android:gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/ST"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+
+                <ImageView
+                    android:id="@+id/seasonImage25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp" />
+
+                <TextView
+                    android:id="@+id/playerName25"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/setting11White"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <!--LS-->
+            <LinearLayout
+                android:id="@+id/player26"
+                android:layout_width="80dp"
+                android:layout_height="95dp"
+                android:layout_marginBottom="220dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/player6"
+                app:layout_constraintStart_toStartOf="@+id/player6"
+                app:layout_constraintEnd_toEndOf="@+id/player6">
+
+                <TextView
+                    android:id="@+id/playerPosition26"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/item13"
+                    android:gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/LS"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+
+                <ImageView
+                    android:id="@+id/seasonImage26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp" />
+
+                <TextView
+                    android:id="@+id/playerName26"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/setting11White"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <!--LW-->
+            <LinearLayout
+                android:id="@+id/player27"
+                android:layout_width="80dp"
+                android:layout_height="95dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/player16"
+                app:layout_constraintStart_toStartOf="@+id/player16"
+                app:layout_constraintEnd_toEndOf="@+id/player16">
+
+                <TextView
+                    android:id="@+id/playerPosition27"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/item13"
+                    android:gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/LW"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+
+                <ImageView
+                    android:id="@+id/seasonImage27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp" />
+
+                <TextView
+                    android:id="@+id/playerName27"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:theme="@style/setting11White"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_bottom_tab"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/search"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:src="@drawable/search_nor"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/squad"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageView
+                android:id="@+id/squad"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:src="@drawable/squad_pre"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/user"
+                app:layout_constraintStart_toEndOf="@+id/search"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/user"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:src="@drawable/user_nor"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/squad"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

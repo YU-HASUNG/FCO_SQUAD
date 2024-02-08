@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="fragment"
+            type="leopardcat.studio.fcosquad.ui.util.BottomSheetFragment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_bottom_sheet">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="데이터 업데이트 기준"
+            android:theme="@style/item20"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/subTitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="기준"
+            android:theme="@style/item15"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
+
+        <ImageView
+            android:id="@+id/closeBtn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/ic_close"
+            android:onClick="@{() -> fragment.closeBtn()}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/info1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="구단주님의 마지막 [공식/친선/클래식]경기를 기준으로 스쿼드 데이터가 조회됩니다."
+            android:theme="@style/item13regular"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/subTitle1"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/info2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="공식경기 등급은 역대 최고 등급이 노출됩니다."
+            android:theme="@style/item13regular"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/info1"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/info3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="데이터는 매시 정각, 두 시간 전의 게임 데이터가 업데이트됩니다."
+            android:theme="@style/item13regular"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/info2"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/info4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="ex) 오후 3시 5분에 접속하시면 오늘 오후 1시까지의 정보를 조회할 수 있습니다."
+            android:theme="@style/item13regular"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/info3"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/subTitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="조회 조건 설정"
+            android:theme="@style/item15"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/info4" />
+
+        <TextView
+            android:id="@+id/option1"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:text="공식경기"
+            android:theme="@style/pageWhite13"
+            android:gravity="center"
+            android:onClick="@{() -> fragment.option1Clicked()}"
+            app:layout_constraintEnd_toStartOf="@+id/option2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/subTitle2"/>
+
+        <TextView
+            android:id="@+id/option2"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="10dp"
+            android:text="공식 친선"
+            android:theme="@style/pageWhite13"
+            android:gravity="center"
+            android:onClick="@{() -> fragment.option2Clicked()}"
+            app:layout_constraintStart_toEndOf="@+id/option1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/subTitle2"/>
+
+        <TextView
+            android:id="@+id/option3"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="리그 친선"
+            android:theme="@style/pageWhite13"
+            android:gravity="center"
+            android:onClick="@{() -> fragment.option3Clicked()}"
+            app:layout_constraintEnd_toStartOf="@+id/option4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/option1"/>
+
+        <TextView
+            android:id="@+id/option4"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="10dp"
+            android:text="클래식 1on1"
+            android:theme="@style/pageWhite13"
+            android:gravity="center"
+            android:onClick="@{() -> fragment.option4Clicked()}"
+            app:layout_constraintStart_toEndOf="@+id/option3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/option2"/>
+
+        <TextView
+            android:id="@+id/confirmBtn"
+            android:layout_width="0dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center"
+            android:text="설정"
+            android:theme="@style/pageWhite13Bold"
+            android:background="@drawable/bg_confirm_button"
+            android:onClick="@{() -> fragment.setMatchType()}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/option3"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
